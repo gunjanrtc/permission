@@ -10,7 +10,6 @@ provider "aws" {
     )
   }
 }
-
 locals {
   name = "${var.app_name}-${var.environment}-${var.region_id}-${var.domain}"
 }
