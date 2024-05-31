@@ -10,4 +10,4 @@ CHANGED_FILES=$(git diff origin/main...HEAD --name-only | grep 'terraform/aws/')
     unset RUN_AWS_STEP
   fi
   echo "all variables"
-  env
+  echo $RUN_AWS_STEP
