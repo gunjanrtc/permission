@@ -26,6 +26,5 @@ steps:
     commands: bash $SCRIPT
     
   - label: "Apply Terraform perf-use1-shared1"
-    commands:
-      - echo "apply"
+    commands: echo "apply"
     if: build.env('RUN_AWS_STEP') == 'true'
