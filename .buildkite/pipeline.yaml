@@ -4,18 +4,21 @@ steps:
       - text: "Users count"
         key: "USERS"
         hint: "Number of concurrent users to simulate"
+        default: "100"
 
   - input: "Provide the spawn rate"
     fields:
       - text: "Spawn Rate"
         key: "SPAWN_RATE"
         hint: "The rate at which users are spawned"
+        default: "10"
 
   - input: "Provide the run time"
     fields:
       - text: "Run Time"
         key: "RUN_TIME"
         hint: "The total duration of the load test,Example values - 10m (10 minutes)"
+        default: "10m"
 
   - label: "Check for changes in AWS directory"
     commands:
