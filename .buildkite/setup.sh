@@ -2,6 +2,11 @@
 
 # Directory to check for changes
 DIRECTORY_TO_CHECK="terraform/aws/"
+# Get the current commit
+CURRENT_COMMIT=$(git rev-parse HEAD)
+
+# Get the previous commit from the main branch
+PREVIOUS_COMMIT=$(git rev-parse HEAD^)
 
 # Check for changes in the specified directory
 if git diff --name-only "$BUILDKITE_COMMIT" "$BUILDKITE_PREVIOUS_COMMIT" -- "$DIRECTORY_TO_CHECK" | grep -q "$DIRECTORY_TO_CHECK"; then
