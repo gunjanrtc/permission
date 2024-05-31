@@ -23,8 +23,10 @@ steps:
         default: "10m"
 
   - label: "Check for changes in AWS directory"
+    key: "check-changes"
     commands: bash $SCRIPT
     
   - label: "Apply Terraform perf-use1-shared1"
     commands: echo "apply"
-    if: build.env('RUN_AWS_STEP') == 'true'
+    depends_on: "check-changes"
+    if: "build.state == 'passed'"
