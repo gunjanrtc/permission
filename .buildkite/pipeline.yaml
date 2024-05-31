@@ -34,8 +34,6 @@ steps:
     commands: |
       if [ $BUILDKITE_STEP_OUTCOME == "soft_failed" ]; then
         echo " no need to apply changes"
-      else
-        echo "need to"
       fi
     depends_on: "check-changes"
     
