@@ -15,5 +15,5 @@ if git diff --name-only "$PREVIOUS_COMMIT" "$CURRENT_COMMIT" -- "$DIRECTORY_TO_C
 else
   echo "No changes detected in $DIRECTORY_TO_CHECK"
   export RUN_AWS_STEP=false
-  exit 1
+  echo $RUN_AWS_STEP
 fi
