@@ -36,7 +36,7 @@ steps:
       if [ $$(buildkite-agent step get "outcome" --step "check-changes") == "soft_failed" ]; then
         echo "no need to apply changes"
       else 
-        echo "apply changes:
+        echo "apply changes"
       fi
     depends_on: "check-changes"
     
