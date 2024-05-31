@@ -30,11 +30,12 @@ steps:
   - wait:
     
   - label: "Apply Terraform perf-use1-shared1"
-    key : "apply"
+    key: "apply"
     commands: |
-
-      if [ $BUILDKITE_STEP_OUTCOME != "soft_failed" ]; then
-        echo "need to apply changes"
+      if [ $BUILDKITE_STEP_OUTCOME == "soft_failed" ]; then
+        echo " no need to apply changes"
+      else
+        echo "need to"
       fi
     depends_on: "check-changes"
     
