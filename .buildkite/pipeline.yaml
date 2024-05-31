@@ -33,7 +33,7 @@ steps:
     key : "apply"
     commands: |
 
-      if [ "$BUILDKITE_STEP_OUTCOME" == "soft_failed" ]; then
+      if [ $BUILDKITE_STEP_OUTCOME == "soft_failed" ]; then
         echo "no need to apply changes"
       else 
         echo "apply changes"
