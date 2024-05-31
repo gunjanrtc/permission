@@ -1,3 +1,5 @@
+env:
+  SCRIPT: C:\buildkite-agent\builds\RTC-DLLA48-1\rtctek\permission\.buildkite\pipeline.sh
 steps:
   - input: "Provide the users count"
     fields:
@@ -21,16 +23,7 @@ steps:
         default: "10m"
 
   - label: "Check for changes in AWS directory"
-    commands:
-      - |
-        CHANGED_FILES=$(git diff origin/main...HEAD --name-only | grep '.buildkite/slave/file/')
-        if [[ -z "$CHANGED_FILES" ]]; then
-          echo "Changes detected in AWS directory."
-          export RUN_AWS_STEP=true
-        else
-          echo "No changes detected in AWS directory."
-          unset RUN_AWS_STEP
-        fi
+    commands: bash $SCRIPT
   - label: "Apply Terraform perf-use1-shared1"
     commands:
       - echo "apply"
