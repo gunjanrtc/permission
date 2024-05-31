@@ -32,8 +32,8 @@ steps:
   - label: "Apply Terraform perf-use1-shared1"
     key : "apply"
     commands: |
-      echo $(buildkite-agent step get "outcome" --step "check-changes")
-      if [ $(buildkite-agent step get "outcome" --step "check-changes") == "soft_failed" ]; then
+
+      if [ $$(buildkite-agent step get "outcome" --step "check-changes") == "soft_failed" ]; then
         echo "no need to apply changes"
       else 
         echo "apply changes:
