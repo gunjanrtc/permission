@@ -30,9 +30,9 @@ steps:
   - wait:
     
   - label: "Apply Terraform perf-use1-shared1"
-    commands: echo "apply"
+    commands: |
+      echo $(buildkite-agent step get "outcome" --step "execute")
     depends_on: "check-changes"
-    if: "meta-data 'check-changes' == '0'"
 
   - label: "Deploy to perf-use1-shared1"
     commands: echo "deploy"
