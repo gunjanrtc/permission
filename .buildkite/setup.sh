@@ -18,4 +18,5 @@ else
   export RUN_AWS_STEP=false
   buildkite-agent meta-data set RUN_AWS_STEP "false"
   echo $RUN_AWS_STEP
+  exit 1
 fi
