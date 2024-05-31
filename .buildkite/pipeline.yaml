@@ -24,6 +24,7 @@ steps:
 
   - label: "Check for changes in AWS directory"
     commands: bash $SCRIPT
+    
   - label: "Apply Terraform perf-use1-shared1"
     commands:
       - echo "apply"
