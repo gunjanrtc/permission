@@ -25,8 +25,14 @@ steps:
   - label: "Check for changes in AWS directory"
     key: "check-changes"
     commands: bash $SCRIPT
+    soft_fail: true
+
+  - wait:
     
   - label: "Apply Terraform perf-use1-shared1"
     commands: echo "apply"
     depends_on: "check-changes"
-    if: "build.state == 'passed'"
+    if: "meta-data 'check-changes' == '0'"
+
+  - label: "Deploy to perf-use1-shared1"
+    commands: echo "deploy"
