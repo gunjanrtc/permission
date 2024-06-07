@@ -8,7 +8,7 @@ init() {
 
 setup() {
     pwd 
-    mkdir -p /pipeline_code_files
+    mkdir -p pipeline_code_files
     cd pipeline_code_files
     pwd
 }
@@ -31,8 +31,8 @@ clean() {
 
 conditional_clean() {
     pwd
-    if [ -d /pipeline_code_files ]; then
-        clean
+    if [ -d pipeline_code_files ]; then
+        echo "folder pipeline_code_files exists"
     else
         echo "Directory /pipeline_code_files does not exist. Skipping clean step."
     fi
