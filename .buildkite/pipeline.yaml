@@ -1,6 +1,7 @@
 env:
   SCRIPT: C:\\buildkite-agent\\builds\\RTC-DLLA48-1\\rtctek\\permission\\.buildkite\\test.sh
 steps:
+
   - label: "Conditional Clean Before Init"
     commands: bash $SCRIPT conditional_clean
 

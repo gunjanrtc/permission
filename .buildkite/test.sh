@@ -25,7 +25,7 @@ run() {
     echo "Test cases execution completed."
     ls
     echo "cd to dir"
-    cd pipeline_code_files
+    cd /pipeline_code_files
     pwd
 }
 
