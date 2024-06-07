@@ -36,12 +36,12 @@ conditional_clean() {
 
 if [[ "$1" == "conditional_clean" ]]; then
     conditional_clean
-elif [[ "$1" == "init"]]; then
+elif [[ "$1" == "init" ]]; then
     init
-elif [[ "$1" == "setup"]]; then
+elif [[ "$1" == "setup" ]]; then
     setup
-elif [[ "$1" == "run"]]; then
+elif [[ "$1" == "run" ]]; then
     run
-elif [[ "$1" == "clean"]]; then
+elif [[ "$1" == "clean" ]]; then
     clean
 fi
