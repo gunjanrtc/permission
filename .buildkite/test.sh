@@ -31,7 +31,7 @@ clean() {
 
 conditional_clean() {
     pwd
-    if [ -d pipeline_code_files ]; then
+    if [ -d /pipeline_code_files ]; then
         echo "folder pipeline_code_files exists"
     else
         echo "Directory /pipeline_code_files does not exist. Skipping clean step."
