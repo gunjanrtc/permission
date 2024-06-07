@@ -11,14 +11,14 @@ steps:
     commands: bash $SCRIPT setup
   - wait
 
-  - label: "init"
-    commands: bash $SCRIPT init
-  - wait
-
-  # - label: "Run"
-  #   key: "run"
-  #   commands: bash $SCRIPT run
+  # - label: "init"
+  #   commands: bash $SCRIPT init
   # - wait
+
+  - label: "Run"
+    key: "run"
+    commands: bash $SCRIPT run
+  - wait
 
   # - label: "Clean"
   #   commands: bash $SCRIPT clean
