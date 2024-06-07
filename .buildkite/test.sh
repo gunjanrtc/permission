@@ -6,17 +6,7 @@ init() {
     ls
     }
 
-setup() {
-    pwd 
-    echo "create dir"
-    mkdir -p pipeline_code_files
-    echo "list all"
-    ls
-    echo "cd to dir"
-    cd pipeline_code_files
-    echo "pwd - "
-    pwd
-}
+
 
 run() {
     pwd
@@ -51,8 +41,6 @@ if [[ "$1" == "conditional_clean" ]]; then
     conditional_clean
 elif [[ "$1" == "init" ]]; then
     init
-elif [[ "$1" == "setup" ]]; then
-    setup
 elif [[ "$1" == "run" ]]; then
     run
 elif [[ "$1" == "clean" ]]; then

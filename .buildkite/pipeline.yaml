@@ -1,24 +1,25 @@
 env:
-  SCRIPT: C:\\buildkite-agent\\builds\\RTC-DLLA48-1\\rtctek\\permission\\.buildkite\\test.sh
+  TEST: C:\\buildkite-agent\\builds\\RTC-DLLA48-1\\rtctek\\permission\\.buildkite\\test.sh
+  RUNNER: C:\\buildkite-agent\\builds\\RTC-DLLA48-1\\rtctek\\permission\\.buildkite\\runner.sh
 steps:
 
   - label: "Conditional Clean Before Init"
-    commands: bash $SCRIPT conditional_clean
+    commands: bash $TEST conditional_clean
 
   - wait
 
   - label: "Setup"
-    commands: bash $SCRIPT setup
+    commands: bash $RUNNER setup
   - wait
 
-  # - label: "init"
-  #   commands: bash $SCRIPT init
-  # - wait
+  - label: "init"
+    commands: bash $TEST init
+  - wait
 
   - label: "Run"
     key: "run"
-    commands: bash $SCRIPT run
+    commands: bash $TEST run
   - wait
 
-  # - label: "Clean"
-  #   commands: bash $SCRIPT clean
+  - label: "Clean"
+    commands: bash $TEST clean
