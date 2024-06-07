@@ -7,9 +7,9 @@ steps:
 
   - wait
 
-  # - label: "Setup"
-  #   commands: bash $SCRIPT setup
-  # - wait
+  - label: "Setup"
+    commands: bash $SCRIPT setup
+  - wait
 
   # - label: "init"
   #   key: "init"
