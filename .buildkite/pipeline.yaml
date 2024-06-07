@@ -7,19 +7,19 @@ steps:
 
   - wait
 
-  - label: "Initial Setup"
+  - label: "Setup"
     commands: bash $SCRIPT setup
   - wait
 
-  - label: "Pre deployment"
+  - label: "init"
     key: "init"
     commands: bash $SCRIPT init
   - wait
 
-  - label: "Execute test cases"
+  - label: "Run"
     key: "run"
     commands: bash $SCRIPT run
   - wait
 
-  - label: "Cleaning"
+  - label: "Clean"
     commands: bash $SCRIPT clean
