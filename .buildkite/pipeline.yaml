@@ -2,30 +2,23 @@ env:
   SCRIPT: C:\\buildkite-agent\\builds\\RTC-DLLA48-1\\rtctek\\permission\\.buildkite\\test.sh
 steps:
   - label: "Conditional Clean Before Init"
-    commands:
-      - |
-        if [ -d /pipeline_code_files ]; then 
-          $PIPELINE_SCRIPT clean; 
-        else 
-          echo "Skipping clean step"; 
-        fi
+    commands: bash $SCRIPT conditional_clean
+
+  - wait
+
   - label: "Initial Setup"
-    commands:
-      - $SCRIPT setup
+    commands: bash $SCRIPT setup
   - wait
 
   - label: "Pre deployment"
     key: "init"
-    commands:
-      - $SCRIPT init
+    commands: bash $SCRIPT init
   - wait
 
   - label: "Execute test cases"
     key: "run"
-    commands:
-      - $SCRIPT run
+    commands: bash $SCRIPT run
   - wait
 
   - label: "Cleaning"
-    commands:
-      - $SCRIPT clean
+    commands: bash $SCRIPT clean
