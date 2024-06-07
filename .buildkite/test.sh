@@ -8,9 +8,13 @@ init() {
 
 setup() {
     pwd 
+    echo "create dir"
     mkdir -p pipeline_code_files
+    echo "list all"
     ls
+    echo "cd to dir"
     cd pipeline_code_files
+    echo "pwd - "
     pwd
 }
 
@@ -20,6 +24,7 @@ run() {
     # Add your test case execution steps here
     echo "Test cases execution completed."
     ls
+    echo "cd to dir"
     cd pipeline_code_files
     pwd
 }
@@ -28,7 +33,7 @@ clean() {
     pwd
     echo "cleaning stage"
     ls
-    rm  pipeline_code_files
+    rm  -r pipeline_code_files
     pwd
 }
 
