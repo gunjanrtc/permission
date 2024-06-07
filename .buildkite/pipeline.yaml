@@ -12,7 +12,6 @@ steps:
   - wait
 
   - label: "init"
-    key: "init"
     commands: bash $SCRIPT init
   - wait
 
