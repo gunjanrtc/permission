@@ -9,7 +9,7 @@ init() {
 setup() {
     pwd 
     mkdir -p /pipeline_code_files
-    cd /pipeline_code_files
+    cd pipeline_code_files
     pwd
 }
 
@@ -18,14 +18,14 @@ run() {
     echo "Running test cases..."
     # Add your test case execution steps here
     echo "Test cases execution completed."
-    cd /pipeline_code_files
+    cd pipeline_code_files
     pwd
 }
 
 clean() {
     pwd
     echo "cleaning stage"
-    rm  /pipeline_code_files
+    rm  pipeline_code_files
     pwd
 }
 
