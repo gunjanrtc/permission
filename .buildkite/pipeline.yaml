@@ -3,7 +3,12 @@ env:
 steps:
   - label: "Conditional Clean Before Init"
     commands:
-      - if [ -d /pipeline_code_files ]; then $PIPELINE_SCRIPT clean; else echo "Skipping clean step"; fi
+      - |
+        if [ -d /pipeline_code_files ]; then 
+          $PIPELINE_SCRIPT clean; 
+        else 
+          echo "Skipping clean step"; 
+        fi
   - label: "Initial Setup"
     commands:
       - $SCRIPT setup
