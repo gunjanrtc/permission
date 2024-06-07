@@ -11,10 +11,10 @@ steps:
     commands: bash $SCRIPT setup
   - wait
 
-  # - label: "init"
-  #   key: "init"
-  #   commands: bash $SCRIPT init
-  # - wait
+  - label: "init"
+    key: "init"
+    commands: bash $SCRIPT init
+  - wait
 
   # - label: "Run"
   #   key: "run"

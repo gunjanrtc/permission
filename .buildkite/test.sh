@@ -2,7 +2,6 @@
 
 init() {
     pwd
-    echo "starting build: $BUILDKITE_BUILD_NUMBER"
     echo "this is init"
     ls
     }
