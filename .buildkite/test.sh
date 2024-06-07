@@ -14,6 +14,7 @@ setup() {
 }
 
 run() {
+    pwd
     echo "Running test cases..."
     # Add your test case execution steps here
     echo "Test cases execution completed."
@@ -22,11 +23,14 @@ run() {
 }
 
 clean() {
+    pwd
     echo "cleaning stage"
-    rm /pipeline_code_files
+    rm  /pipeline_code_files
+    pwd
 }
 
 conditional_clean() {
+    pwd
     if [ -d /pipeline_code_files ]; then
         clean
     else
