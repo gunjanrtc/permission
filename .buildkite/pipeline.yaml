@@ -7,19 +7,19 @@ steps:
 
   - wait
 
-  - label: "Setup"
-    commands: bash $SCRIPT setup
-  - wait
+  # - label: "Setup"
+  #   commands: bash $SCRIPT setup
+  # - wait
 
-  - label: "init"
-    key: "init"
-    commands: bash $SCRIPT init
-  - wait
+  # - label: "init"
+  #   key: "init"
+  #   commands: bash $SCRIPT init
+  # - wait
 
-  - label: "Run"
-    key: "run"
-    commands: bash $SCRIPT run
-  - wait
+  # - label: "Run"
+  #   key: "run"
+  #   commands: bash $SCRIPT run
+  # - wait
 
-  - label: "Clean"
-    commands: bash $SCRIPT clean
+  # - label: "Clean"
+  #   commands: bash $SCRIPT clean
