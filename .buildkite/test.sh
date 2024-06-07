@@ -26,12 +26,16 @@ clean() {
     rm /pipeline_code_files
 }
 
-if [ "$1" == "conditional_clean" ]; then
+conditional_clean() {
     if [ -d /tmp/pipeline_code_files ]; then
         clean
     else
-        echo "Directory /tmp/pipeline_code_files does not exist. Skipping clean step."
+        echo "Directory /pipeline_code_files does not exist. Skipping clean step."
     fi
+}
+
+if [ "$1" == "conditional_clean" ]; then
+    conditional_clean
 elif [[ "$1" == "init"]]; then
     init
 elif [[ "$1" == "setup"]]; then
