@@ -10,15 +10,15 @@ steps:
     commands: bash $SCRIPT setup
   - wait
 
-  # - label: "Pre deployment"
-  #   key: "init"
-  #   commands: bash $SCRIPT init
-  # - wait
+  - label: "Pre deployment"
+    key: "init"
+    commands: bash $SCRIPT init
+  - wait
 
-  # - label: "Execute test cases"
-  #   key: "run"
-  #   commands: bash $SCRIPT run
-  # - wait
+  - label: "Execute test cases"
+    key: "run"
+    commands: bash $SCRIPT run
+  - wait
 
-  # - label: "Cleaning"
-  #   commands: bash $SCRIPT clean
+  - label: "Cleaning"
+    commands: bash $SCRIPT clean
